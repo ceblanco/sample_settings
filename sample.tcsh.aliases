@@ -1,0 +1,71 @@
+alias kdlock kdesktop_lock --blank --forcelock
+alias lf "ls -aCF"
+alias lfc "ls -aCF *.c"
+alias lfC "ls -aCF *.C"
+alias lfh "ls -aCF *.h"
+alias lfm "ls -aCF *.mel"
+alias ll "ls -ls"
+alias lld "ls -lsd"
+alias cls "ls --color"
+alias nf "ls \!^ | wc -w"
+alias nfa "ls -a | wc -w"
+alias psg "ps -efw | grep "
+alias pgrep "ps -ef | grep \!^ | egrep -v grep "
+alias rgrep "grep -r \!^ *"
+#alias gros "gr_osview -a"
+alias mroe more
+alias grpe grep
+alias pgrpe pgrep
+alias rgrpe rgrep
+alias envgrep "env | grep \!^"
+alias envgrpe envgrep
+alias pe printenv
+alias calc "perl -le 'print \!:1'"
+alias procs "grep processor /proc/cpuinfo | wc -l"
+
+alias gq gqview
+alias grpe grep
+alias mroe more
+alias pgrep "ps -ef | grep"
+alias psg "ps -ef | grep"
+alias aliasgrep "alias | grep \!^"
+alias aliasgrpe aliasgrep
+#alias ctqgrep "ctquery -expand | grep "
+#alias ctqgrpe "ctquery -expand | grep "
+alias srcGrep "grep -n \!^ *.[Cch]"
+alias sgrep "grep -n \!^ *.[Cch]"
+alias sgrpe "grep -n \!^ *.[Cch]"
+alias hgrep "grep -n \!^ *.h"
+alias plgrep "grep -n \!^ *.pl"
+alias tclgrep "grep -n \!^ *.tcl"
+alias lo exit
+alias fq "find . -name \!^ -print"
+alias superLS "find . -exec ls -lsd {} \;"
+alias superLSD "find . -type d -exec ls -lsd {} \;"
+alias pl32 "printenv LD_LIBRARYN32_PATH"
+alias pl "printenv LD_LIBRARY_PATH"
+
+# For debugging rld problems
+         #  trace o32 rld issues
+             alias ra     \
+                'setenv _RLD_PATH /usr/lib/rld.debug       ;'\
+                'setenv _RLD_ARGS "\!*"                    ;'
+             alias nora   \
+                'unsetenv _RLD_ARGS                        ;'\
+                'setenv _RLD_PATH /lib/rld                 ;'
+                                                                                
+          #  trace n32 rld issues
+             alias ra32   \
+                'setenv _RLDN32_PATH /usr/lib32/rld.debug  ;'\
+                'setenv _RLD_ARGS "\!*"                    ;'
+             alias nora32 \
+                'unsetenv _RLD_ARGS                        ;'\
+                'setenv _RLDN32_PATH /lib32/rld            ;'
+
+          #  trace 64 rld issues
+             alias ra64   \
+                'setenv _RLD64_PATH /usr/lib64/rld.debug   ;'\
+                'setenv _RLD_ARGS "\!*"                    ;'
+             alias nora64 \
+                'unsetenv _RLD_ARGS                        ;'\
+                'setenv _RLD64_PATH /lib64/rld             ;'
